@@ -1,3 +1,5 @@
+import 'package:get_cli/commands/impl/create/anchao_screen/anchao_screen.dart';
+
 import 'impl/commads_export.dart';
 import 'interface/command.dart';
 
@@ -9,8 +11,10 @@ final List<Command> commands = [
       CreatePageCommand(),
       CreateProjectCommand(),
       CreateProviderCommand(),
+      CreateViewCommand(),
+      // 因为用的同一个命令，调整位置
+      CreateAnchaoScreenCommand(),
       CreateScreenCommand(),
-      CreateViewCommand()
     ],
     ['-c'],
   ),

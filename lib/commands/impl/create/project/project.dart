@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dcli/dcli.dart';
+import 'package:get_cli/samples/impl/anchao/anchao_analysis_options.dart';
 import 'package:path/path.dart' as p;
 import 'package:recase/recase.dart';
 
@@ -66,7 +67,8 @@ class CreateProjectCommand extends Command {
       var androidLang = androidResult.index == 0 ? 'kotlin' : 'java';
 
       final linterMenu = Menu([
-        'yes',
+        'default',
+        'mvc',
         'no',
       ], title: LocaleKeys.ask_use_linter.tr);
       final linterResult = linterMenu.choose();
@@ -91,7 +93,21 @@ class CreateProjectCommand extends Command {
                 .create();
           }
           break;
-
+        case 2:
+          if (PubspecUtils.isServerProject) {
+            await PubspecUtils.addDependencies('lints',
+                isDev: true, runPubGet: true);
+            AnalysisOptionsSample(
+                    include: 'include: package:lints/recommended.yaml')
+                .create();
+          } else {
+            await PubspecUtils.addDependencies('flutter_lints',
+                isDev: true, runPubGet: true);
+            AnchaoAnalysisOptionsSample(
+                    include: 'include: package:flutter_lints/flutter.yaml')
+                .create();
+          }
+          break;
         default:
           AnalysisOptionsSample().create();
       }

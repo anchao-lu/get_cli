@@ -1,3 +1,5 @@
+import 'package:get_cli/commands/impl/init/flutter/init_anchao_mvc.dart';
+
 import '../../../../common/menu/menu.dart';
 import '../../../../common/utils/logger/log_utils.dart';
 import '../../../../common/utils/pubspec/pubspec_utils.dart';
@@ -17,12 +19,22 @@ class InitCommand extends Command {
     final menu = Menu([
       'GetX Pattern (by Kauê)',
       'CLEAN (by Arktekko)',
+      'MVC (by Anchao)',
     ], title: 'Which architecture do you want to use?');
     final result = menu.choose();
 
-    result.index == 0
-        ? await createInitGetxPattern()
-        : await createInitKatekko();
+    switch (result.index) {
+      case 0:
+        await createInitGetxPattern();
+        break;
+      case 1:
+        await createInitKatekko();
+        break;
+      case 2:
+        await createInitAnchao();
+        break;
+    }
+
     if (!PubspecUtils.isServerProject) {
       await ShellUtils.pubGet();
     }

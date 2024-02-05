@@ -32,6 +32,10 @@ class Structure {
         path: 'lib/infrastructure/navigation/navigation.dart'),
     //generator files
     'generate_locales': replaceAsExpected(path: 'lib/generated'),
+    // anchao files
+    'anchao_screen': replaceAsExpected(path: 'lib/screens'),
+    'anchao_controller': replaceAsExpected(path: 'lib/screens'),
+    'anchao_binding': replaceAsExpected(path: 'lib/screens'),
   };
 
   static FileModel model(String? name, String command, bool wrapperFolder,
