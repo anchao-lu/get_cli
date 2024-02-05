@@ -17,31 +17,30 @@ get create project
 
 - 选择 1) Flutter Project
 - 输入项目名称以及包名，选择 iOS 和安卓开发语言
-- do you want to use some linter? 这里选择 2, 默认加入了一下 linters
+- do you want to use some linter? 这里选择 2, 默认加入了一些 linters
 - 等上面的命令执行完成，直到出现 Which architecture do you want to use?
-- 选择 3, 之后选择默认值 1) yes 覆盖
+- 选择 3) MVC (by Anchao), 之后选择默认值 1) yes 覆盖
 - 等待命令执行完成，选择编辑器打开项目进行开发
-
-## 开发过程中使用下面命令生成页面，会自动配置路由
-```dart
-get create screen:screenName
-```
-
-## 如果需要分 module，只需要在 screenName 前加入 moduleName 即可，以 / 分隔
-```dart
-get create screen:moduleName/screenName
-```
 
 # 也可以选择其他方式创建项目，然后在项目根目录执行以下命令
 ```shell
 get init
 ```
 
-- Which architecture do you want to use? 选择 3) MVC (by Anchao)
-- 之后选择默认值 1) yes 覆盖
-- - 新建项目也可以使用
+- 等上面的命令执行完成，直到出现 Which architecture do you want to use?
+- 选择 3) MVC (by Anchao), 之后选择默认值 1) yes 覆盖
 - 等待命令执行完成，选择编辑器打开项目进行开发
-- 开发过程同上
+
+# 开发过程中使用下面的命令生成页面，会自动配置路由
+```dart
+get create screen:screenName
+```
+
+# 如果需要分 module, 只需要在 screenName 前加入 moduleName 即可，以 / 分隔
+```dart
+get create screen:moduleName/screenName
+```
+- screenName 不能和其他页面同名
   ''';
 
   @override
