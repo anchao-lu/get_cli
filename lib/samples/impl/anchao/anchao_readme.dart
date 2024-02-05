@@ -15,7 +15,7 @@ get create project
 
 - 选择 1) Flutter Project
 - 输入项目名称以及包名，选择 iOS 和安卓开发语言
-- do you want to use some linter? 这里选择 2, 默认加入了一些 linters
+- do you want to use some linter? 这里选择 2) mvc, 默认加入了一些 linters
 - 等上面的命令执行完成，直到出现 Which architecture do you want to use?
 - 选择 3) MVC (by Anchao), 之后选择默认值 1) yes 覆盖
 - 等待命令执行完成，选择编辑器打开项目进行开发
