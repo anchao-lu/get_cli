@@ -4,6 +4,7 @@ import 'package:get_cli/commands/impl/create/anchao_screen/anchao_screen.dart';
 import 'package:get_cli/samples/impl/anchao/anchao_error_handler.dart';
 import 'package:get_cli/samples/impl/anchao/anchao_i18n.dart';
 import 'package:get_cli/samples/impl/anchao/anchao_main.dart';
+import 'package:get_cli/samples/impl/anchao/anchao_readme.dart';
 
 import '../../../../common/utils/logger/log_utils.dart';
 import '../../../../core/internationalization.dart';
@@ -38,6 +39,7 @@ Future<void> createInitAnchao() async {
   AnchaoMainSample().create();
   AnchaoI18nSample().create();
   AnchaoErrorHandlerSample().create();
+  AnchaoReadMeSample().create();
 
   await Future.wait([
     CreateAnchaoScreenCommand().execute(),
