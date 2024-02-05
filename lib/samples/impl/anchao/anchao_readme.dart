@@ -3,9 +3,7 @@ import 'package:get_cli/samples/interface/sample_interface.dart';
 class AnchaoReadMeSample extends Sample {
   AnchaoReadMeSample() : super('README.md', overwrite: true);
 
-  String get _cliReadMe => '''
-
-# 终端执行命令，安装 get cli
+  String get _cliReadMe => '''# 终端执行命令，安装 get cli
 ```dart
 flutter pub global activate -sgit https://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@github.com/anchao-lu/get_cli.git
 ```
