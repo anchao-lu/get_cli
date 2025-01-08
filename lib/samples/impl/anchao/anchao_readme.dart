@@ -5,7 +5,7 @@ class AnchaoReadMeSample extends Sample {
 
   String get _cliReadMe => '''# 终端执行命令，安装 get cli
 ```dart
-flutter pub global activate -sgit https://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@github.com/anchao-lu/get_cli.git
+flutter pub global activate -sgit https://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@github.com/anchao-lu/get_cli.git
 ```
 
 # 利用脚手架创建项目
