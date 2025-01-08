@@ -27,7 +27,7 @@ class ${_fileName.pascalCase}Screen extends $_controllerName {
       init: ${_fileName.pascalCase}Controller(),
       builder: (_) => Scaffold(
         appBar: AppBar(
-          title: const Text('Title'),
+          title: const Text('${_fileName}'),
         ),
       ),
     );
